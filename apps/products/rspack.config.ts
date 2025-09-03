@@ -5,20 +5,13 @@ import {
   NxModuleFederationDevServerPlugin,
 } from '@nx/module-federation/rspack.js';
 import { join } from 'path';
+
 import config from './module-federation.config';
-const isVercel = process.env.VERCEL === '1';
-
-
-
 
 export default {
-
   output: {
-    path: isVercel
-      ? join(__dirname, '.vercel/output/static/products')
-      : join(__dirname, 'dist'),
+    path: join(__dirname, 'dist'),
     publicPath: 'auto',
-    uniqueName: 'products',
   },
   devServer: {
     port: 4201,
