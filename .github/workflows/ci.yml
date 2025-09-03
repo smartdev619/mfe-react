@@ -14,15 +14,6 @@ jobs:
       - run: npm i
       - run: npm ci
       - name: Build Affected Projects
-        run: npx nx affected:build --base=master --head=HEAD
+        run: npx nx affected:build
       - name: Test Affected Projects
-        run: npx nx affected:test --base=master --head=HEAD
-      - name: Deploy Affected Projects
-        run: npx nx affected:deploy --base=master --head=HEAD
-      - name: Install Vercel CLI
-        run: npm install -g vercel
-
-      - name: Build with Vercel
-        run: vercel build --token=xBYDcHNYUXgkxl9e4ajWaEfN
-      - name: Deploy to Vercel
-        run: vercel deploy --prebuilt --prod --token=xBYDcHNYUXgkxl9e4ajWaEfN
+        run: npx nx affected:test
