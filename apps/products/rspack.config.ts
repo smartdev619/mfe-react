@@ -16,7 +16,7 @@ export default {
   output: {
     path: isVercel
       ? join(__dirname, '.vercel/output/static/products')
-      : join(__dirname, '../../dist/apps/products'),
+      : join(__dirname, '../../apps/products/dist'),
     publicPath: 'auto',
     uniqueName: 'products',
   },
