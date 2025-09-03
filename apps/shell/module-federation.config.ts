@@ -8,7 +8,7 @@ const config: ModuleFederationConfig = {
     [
       'products',
       isProd
-        ? 'https://mfe-react-products-ey5jn9ssd-chhabeg-singhs-projects.vercel.app/'
+        ? 'https://mfe-react-products.vercel.app/'
         : 'http://localhost:4201/',
     ],
   ],

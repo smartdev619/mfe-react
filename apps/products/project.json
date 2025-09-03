@@ -6,13 +6,28 @@
   "tags": [],
   "targets": {
     "serve": {
+      "executor": "@nx/rspack:dev-server",
       "options": {
         "port": 4201
       },
       "dependsOn": ["typecheck"]
     },
     "build": {
-      "dependsOn": ["^build", "typecheck"]
+      "executor": "@nx/rspack:build",
+      "outputs": ["{options.outputPath}"],
+      "dependsOn": ["^build", "typecheck"],
+      "options": {
+        "outputPath": "dist/apps/products",
+        "main": "apps/products/src/main.tsx",
+        "tsConfig": "apps/products/tsconfig.app.json",
+        "assets": ["apps/products/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "outputPath": ".vercel/output/static/products",
+          "mode": "production"
+        }
+      }
     }
   }
 }
