@@ -10,7 +10,7 @@ import config from './module-federation.config';
 
 export default {
   output: {
-    path: join(__dirname, 'dist'),
+    path: join(__dirname, '../shell/dist/products'),
     publicPath: 'auto',
   },
   devServer: {
