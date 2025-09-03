@@ -19,6 +19,7 @@
     "customConditions": ["development"],
     "baseUrl": ".",
     "paths": {
+      "@mfe-react/components": ["lib/components/src/index.ts"],
       "products/Module": ["apps/products/src/remote-entry.ts"]
     }
   }

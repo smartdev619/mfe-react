@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import NxWelcome from './nx-welcome';
-// import {MfeReactComponents} from 'lib/components';
+import { MfeReactComponents } from '@mfe-react/components';
 
 const StyledApp = styled.div`
   // Your style here
@@ -9,7 +9,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      {/* <MfeReactComponents /> */}
+      <MfeReactComponents />
       <NxWelcome title="products" />
     </StyledApp>
   );
