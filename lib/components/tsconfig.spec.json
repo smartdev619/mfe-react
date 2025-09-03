@@ -5,12 +5,6 @@
     "jsx": "react-jsx",
     "types": ["jest", "node"]
   },
-   "exclude": [
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.test.ts",
-    "**/*.test.tsx"
-  ],
   "include": [
     "jest.config.ts",
     "src/**/*.test.ts",
