@@ -14,8 +14,8 @@ jobs:
       - run: npm i
       - run: npm ci
       - name: Build Affected Projects
-        run: npx nx affected:build --base=master~1 --head=HEAD
+        run: npx nx affected:build --base=master --head=HEAD
       - name: Test Affected Projects
-        run: npx nx affected:test --base=master~1 --head=HEAD
+        run: npx nx affected:test --base=master --head=HEAD
       - name: Deploy Affected Projects
-        run: npx nx affected:deploy --base=master~1 --head=HEAD
+        run: npx nx affected:deploy --base=master --head=HEAD
